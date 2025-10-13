@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="images/cc_logo.png" type="image/x-icon" />
+    <!-- Theme tittle --> 
+    <title>CoClouds - Digital Cloud Transformation</title>  
+    
+    <!-- Theme style CSS -->         
+    <link href="css/style.css" rel="stylesheet"> 
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+   
+    <!-- Header Area -->
+    <header class="main_header_area">   
+		<nav class="navbar navbar-expand-lg"> 
+			<div class="navbar-brand">
+				<a class="logo" href="index.html"><img src="images/cc_logo.png" alt=""></a>   
+			</div>
+			<!-- Small Divice Menu-->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar_supported"  aria-label="Toggle navigation"> 
+				<i class="fas fa-bars"></i>
+			</button>
+			<!-- Left Nav bar -->
+			<div class="collapse navbar-collapse navbar_supported"> 
+				<ul class="navbar-nav"> 
+					
+					<li><a href="index.html">Home</a></li>   
+                   			<li><a href="getstarted.html">Getting Started</a></li>  
+					<li><a href="services.html">Services</a></li>       
+					<li><a href="about.html">Company</a></li>  
+					<li><a href="contact.html">Contact</a></li>	
+ 
+                               </li>    
+				</ul>    
+			</div> 
+			<!-- Right Nav bar --> 
+			<ul class="right_nav">    
+				<li><a href="services.html" class="get_m">Our Services</a></li>
+				<li><a href="about.html" class="theme_btn">Our Story</a></li>
+			</ul>  
+		</nav>   
+    </header>
+    <!-- Header Area -->    
+    
+    <!-- Banner Area -->    
+    <section class="pages_banner b_angle bagle_2">
+    	<div class="container">
+    		<img src="images/map.png" alt="" class="images_1">
+    		<h2>Contact</h2>
+			<p>We're here to help!</p>
+    		<img src="images/banner-i-10.png" alt="" class="images_2">
+    	</div> 
+    </section>
+    <!-- Banner Area -->     
+    
+    <!-- Got a Problem --> 
+    <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+    <section class="got_problem contact_p">
+    	<div class="container"> 
+    		<div class="row">
+    			<div class="col-lg-5 map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2476.8475903587196!2d-0.1542049579678398!3d51.62600098143803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487619a363cf272f%3A0x73026b594c7e99d0!2sNorth%20London%20Business%20Park%2C%20Oakleigh%20Rd%20S%2C%20London%20N11%201GN!5e0!3m2!1sen!2suk!4v1662735324251!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    			</div>
+    			<div class="col-lg-7 problem_from">
+    				<h2>Get in Touch</h2>
+    				<p>Before we put our thinking caps on, tell us a few things about yourself</p>
+    				<form class="solve_from row" action="contact.php" method="post" id="phpcontactform" novalidate="novalidate">  
+						<div class="form-group col-md-6">   
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name *"> 
+						</div> 
+						<div class="form-group col-md-6">
+							<input type="email" class="form-control" id="email" name="email"  placeholder="Email *">
+						</div>    
+						<div class="form-group col-12">
+							<textarea class="form-control" id="message" name="message" placeholder="Message *"></textarea>
+						</div>
+						<div class="form-group col-12">
+							<button class="theme_btn" id="js-contact-btn" type="submit">Send Message</button>   
+							<div id="js-contact-result" data-success-msg="Form submitted successfully." data-error-msg="Messages Successfully"></div>
+						</div>     
+					</form> 
+ 				 <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  				<script>
+      				const constraints = {
+          			name: {
+              			presence: { allowEmpty: false }
+          			},
+          			email: {
+              			presence: { allowEmpty: false },
+              			email: true
+          				},
+          			message: {
+              			presence: { allowEmpty: false }
+          				}
+      				};
+    				  const form = document.getElementById('phpcontactform');
+      				  form.addEventListener('submit', function (event) {
+        			  const formValues = {
+      				  name: form.elements.name.value,
+              			  email: form.elements.email.value,
+             		          message: form.elements.message.value
+                                };
+         			 const errors = validate(formValues, constraints);
+          			if (errors) {
+           			   event.preventDefault();
+              				const errorMessage = Object
+                 		 .values(errors)
+                  		 .map(function (fieldValues) {
+                   		   return fieldValues.join(', ')
+                		  })
+                 		 .join("\n");
+             			 alert(errorMessage);
+      				    }
+      				}, false);
+ 		 	 </script>
+    			</div>
+    		</div>
+    		
+    		<div class="row contact_info"> 
+    			<div class="col-xl-3 col-md-6">
+    				<div class="info">
+    					<div class="icons">
+    						<i class="flaticon-paper-plane"></i>
+    					</div>
+    					<h4>Email address</h4>
+    					<a href="#">enquiries@coclouds.co.uk</a>
+    					
+    				</div>
+    			</div>
+    			<div class="col-xl-3 col-md-6">
+    				<div class="info">
+    					<div class="icons icons_2">
+    						<i class="flaticon-route"></i>
+    					</div>
+    					<h4>Office Location</h4>
+    					<p>COCLOUDS LTD, North Suite A, 82 James Carter Road, 82 James Carter Road, Mildenhall, IP28 7DE, UK</p>
+    				</div>
+    			</div> 
+    			<div class="col-lg-6 quick_call">
+					<h3>Quick calls?</h3>
+   					<a href="tel:0330 633 9077" class="name"><img src="images/noprofile.png" alt="">Anita Horvath</a>
+                  <p>Call us on 0330 633 9077 to get a quote</p>
+   					<p>Want to get hired or want to hire us? Type away below. Schedule a short introductory call </p>
+   					<a href="mailto:anita.h@coclouds.co.uk" class="theme_btn">Contact @a.horvath</a>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <!-- Got a Problem -->    
+      
+    <!-- Get in touch -->
+     <!--<section class="get_touch">
+    	<div class="container">
+    		<h2>Get in touch or create an account</h2>
+    		<h6>Succeed More</h6>
+    		<p>Explore your options, and map out your path to success.</p>
+    		<a href="#" class="theme_btn">Explore your options</a>
+    		<a href="#" class="theme_btn create">Create Account</a>
+    	</div>
+    </section>-->
+    <!-- Get in touch -->
+	
+    <!-- Footer Area -->  
+    <footer class="footer_area footer_2">   
+       <div class="container"> 
+			<div class="footer_inner row">  
+				<div class="footer_widget col-lg-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+					<h4>Navigation</h4>
+					<ul class="footer_nav">   
+						<li><a href="about.html">About us</a></li>     
+						<li><a href="contact.html">Contact</a></li>     
+						<li><a href="start.html">Get Started</a></li>     
+						<li><a href="services.html">Services</a></li>    
+					</ul>
+				</div>  
+				<div class="footer_widget fw_2 col-lg-4 col-sm-6 wow fadeIn" data-wow-delay="0.6s">
+					<h4>Solutions</h4>
+					<ul class="footer_nav">   
+						<li><a href="comingsoon.html">A.I</a></li>     
+						<li><a href="comingsoon.html">Internet-of-Things</a></li>     
+						<li><a href="comingsoon.html">Edge Computing</a></li>     
+						<li><a href="comingsoon.html">Multi Cloud</a></li>     
+						<li><a href="comingsoon.html">Advanced Security</a></li>     
+						<li><a href="comingsoon.html">Serverless Computing</a></li>     
+						<li><a href="comingsoon.html">Containers</a></li>  
+					</ul>
+				</div> 
+				<div class="footer_widget col-lg-3 fw_3 col-sm-6 wow fadeIn" data-wow-delay="0.9s">
+					<h4>Services</h4> 
+					<ul class="footer_nav">   
+						<li><a href="services.html">Compute</a></li>     
+						<li><a href="services.html">Storage</a></li>          
+						<li><a href="services.html">Database</a></li>          
+						<li><a href="services.html">Monitoring</a></li>          
+						<li><a href="services.html">Security</a></li>          
+						<li><a href="services.html">Mobile-Applications</a></li>          
+						<li><a href="services.html">Web Applications</a></li>          
+						<li><a href="services.html">Networking</a></li>          
+					</ul>
+				</div>   
+				<div class="footer_widget col-lg-2 col-sm-6 wow fadeIn" data-wow-delay="0.9s">
+					<h4>Contact</h4> 
+					<ul class="footer_nav">      
+						<li><a href="contact.html">Contact Us</a></li>          
+						<li><a href="contact.html">What we Do</a></li>          
+						<li><a href="contact.html">Our People</a></li>          
+						<li><a href="contact.html">Location</a></li>          
+						<li><a href="comingsoon.html">Login Portal</a></li>           
+					</ul>
+				</div>          
+			</div>  
+			<div class="copy_right cr_2">
+				<div class="row"> 
+					<div class="col-xl-7 col-lg-5 wow slideInLeft">
+						<p class="location"><a href="index.html"><img src="images/cc_logo.png" alt=""></a>North London Business Park. Oakleigh Rd S <br>London, N11 1GN, UK</p> 
+					</div> 
+					<div class="col-xl-5 col-lg-7  wow slideInRight">  
+						 <ul class="footer_social"> 
+							<li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>    
+						</ul> 
+						<!-- <p class="c_p">Copyrights 2019 <a href="#">Themazine</a></p> -->
+					</div>   
+				</div>
+			</div> 
+       </div> 
+    </footer>
+    <!-- End Footer Area --> 
+    
+    <!-- Scroll Top Button -->
+    <button class="scroll-top">
+        <i class="fas fa-angle-up"></i>
+    </button>
+
+    <!-- Preloader -->  
+	<div class="preloader"><img src="images/preloder.png" alt=""></div>
+    
+    <!-- jQuery v3.3.1 -->
+    <script src="js/jquery-3.3.1.min.js"></script>    
+    <!-- Bootstrap v4.0.0 -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+    <!-- Extra Plugin -->
+    <script src="vendors/animate-css/wow.min.js"></script>     
+    <script src="vendors/magnify-popup/jquery.magnific-popup.min.js"></script>      
+    
+    <!-- Theme js / Custom js -->
+    <script src="js/theme.js"></script> 
+</body>
+</html> 
