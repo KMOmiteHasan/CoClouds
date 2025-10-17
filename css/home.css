@@ -1326,6 +1326,18 @@ body {
         margin: 0;
     }
 
+    .main_header_area .navbar .navbar-brand .logo {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .main_header_area .navbar .navbar-toggler {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+        width: 5.5rem;
+    }
+
     .top-header-right {
         display: none;
     }
@@ -1492,6 +1504,15 @@ body {
         flex: none;
     }
 
+    .platform_facilitates {
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+    }
+
+    .platform_facilitates .platform {
+        border: 1px solid #0000001a;
+    }
+
     .cloud_agency_area .container .row {
         flex-direction: column;
     }
@@ -1528,6 +1549,17 @@ body {
         display: none;
     }
 
+    .digital_modules {
+        width: 100%;
+        margin: 0 0 5rem;
+        padding-top: 10rem;
+        padding-bottom: 0;
+    }
+
+    .digital_modules .reporting_area {
+        margin: 5rem auto 0;
+    }
+
     .digital_modules .reporting_area {
         flex-direction: column;
     }
@@ -1559,6 +1591,10 @@ body {
     }
 
     .smarter_collect .container .row {
+        margin: 0 auto 0;
+    }
+
+    .smarter_collect .container .row {
         flex-direction: column;
     }
 
@@ -1578,6 +1614,9 @@ body {
         width: 50%;
     }
 
+    .testimonial_area {
+        padding-bottom: 8rem;
+    }
 }
 
 @media (max-width: 668px) {
