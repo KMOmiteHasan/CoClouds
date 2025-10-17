@@ -129,7 +129,7 @@
 
 		<div class="container bdr">
 			<div class="row">
-				<div class="col-lg-8">
+				<div class="col-lg-8 banner_content">
 					<div class="main-sub-title w-100">
 						<span>EMPOWER YOUR BUSINESS</span>
 					</div>
@@ -351,8 +351,8 @@
 				</div>
 				<div class="col-lg-6 wow fadeInRight reporting_area-content reporting_area-content-right">
 					<div class="reporting_img">
-						<img src="images/reporting-1.png" alt="">
-						<img src="images/reporting-2.png" alt="" class="img_2">
+						<!-- <img src="images/portfolio-03-1024x574.jpg" alt=""> -->
+						<img src="images/h1-mask03.png" alt="" class="img_2">
 					</div>
 				</div>
 			</div>
@@ -610,7 +610,7 @@
 					</div>
 				</div>
 				<div class="col-lg-5 smarter_img">
-					<img src="images/ex-img.png" alt="">
+					<img src="images/h1-mask2.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -622,7 +622,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 testimonial_img">
-					<img src="images/testimonial.png" alt="">
+					<img src="images/portfolio-05-1024x574.jpg" alt="">
 				</div>
 				<div class="col-lg-7">
 					<div class="carousel testimonial_s slide" data-ride="carousel">
@@ -804,10 +804,10 @@
 			slidesPerView: 3,
 			spaceBetween: 30,
 			loop: true,
-			speed: 1000, // slide transition speed (in ms)
+			speed: 1000,
 			autoplay: {
-				delay: 2500, // time between slides (in ms)
-				disableOnInteraction: true, // keep autoplay running even after user interaction
+				delay: 3000,
+				disableOnInteraction: false, // keep autoplay active even after user swipes
 			},
 			breakpoints: {
 				0: {
@@ -821,7 +821,25 @@
 				},
 			},
 		});
+
+		// Pause autoplay on hover (for desktop)
+		const swiperEl = document.querySelector('.platform-slider');
+		swiperEl.addEventListener('mouseenter', () => {
+			swiper.autoplay.stop();
+		});
+		swiperEl.addEventListener('mouseleave', () => {
+			swiper.autoplay.start();
+		});
+
+		// Pause autoplay on touch (for mobile)
+		swiperEl.addEventListener('touchstart', () => {
+			swiper.autoplay.stop();
+		});
+		swiperEl.addEventListener('touchend', () => {
+			swiper.autoplay.start();
+		});
 	</script>
+
 
 </body>
 
