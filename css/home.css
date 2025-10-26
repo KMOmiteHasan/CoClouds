@@ -533,6 +533,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     gap: 1.5rem;
+    align-items: stretch;
 }
 
 .platform_facilitates .platform_row:before, .platform_facilitates .platform_row:after {
@@ -548,7 +549,7 @@ body {
     padding: 0;
     max-width: 32%;
     display: flex;
-    height: 100%;
+    height: initial;
 }
 
 .platform_facilitates .platform {
@@ -964,11 +965,15 @@ body {
 
 .platform_facilitates .platform a {
     display: block;
-    color: #ffffff;
+    color: #000000;
     padding: 2.7rem 0;
     font-size: 2.4rem;
     line-height: 1.22;
     font-weight: 600;
+}
+
+.platform_facilitates.pf_2 .platform a {
+    color: #ffffff;
 }
 
 .platform_facilitates .swiper.platform-slider .platform p {
@@ -1413,7 +1418,6 @@ body {
         padding: 0;
         max-width: 49%;
         display: flex;
-        height: 100%;
     }
 
     .text-lg-right .cloud_agency-mask-img-3 {

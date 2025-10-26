@@ -1,0 +1,118 @@
+.platform_facilitates {
+    padding-bottom: 0;
+}
+
+.platform_facilitates.pf_2 {
+    padding-bottom: 8rem;
+}
+
+.digital_modules {
+    margin: 0;
+    padding: 0;
+}
+
+.digital_modules .reporting_area {
+    gap: 0;
+}
+
+.digital_modules .reporting_area .reporting_area-content {
+    width: 50%;
+    max-width: 50%;
+    height: initial;
+    flex: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.digital_modules .reporting_area .reporting_area-content.reporting_area-content-left img {
+    margin-bottom: 2rem;
+}
+
+.digital_modules .reporting_area h1 {
+    color: #181818;
+    max-width: 100%;
+    padding: 0;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.digital_modules .reporting_area p {
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.digital_modules .reporting_area ul {
+    list-style-type: disclosure-closed;
+}
+
+.digital_modules .reporting_area ul li {
+    list-style-type: disclosure-closed;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.digital_modules .reporting_img {
+    justify-content: center;
+}
+
+.banner_area .theme_btn {
+    margin-left: 0 !important;
+}
+
+@media (max-width: 990px) {
+    .digital_modules .reporting_area {
+        flex-direction: column;
+    }
+
+    .digital_modules .reporting_area .reporting_area-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .digital_modules .reporting_area .reporting_area-content.reporting_area-content-right {
+        order: 2;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .banner_area.about_banner {
+        height: 65rem;
+    }
+        .pf_2 {
+            padding-top: 8rem;
+        }
+}
+
+@media (max-width: 520px) {
+    .banner_area.about_banner {
+        height: 70rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .banner_area h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .banner_area h1 {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+
+    .banner_area .theme_btn {
+        padding: 0 1.8rem;
+        font-size: 1.6rem;
+        line-height: 3;
+    }
+}
